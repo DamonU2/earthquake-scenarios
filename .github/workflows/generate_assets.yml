@@ -2,7 +2,7 @@ name: Create release assets
 
 on: 
   release:
-    types: [published]
+    types: [edited]
   workflow_dispatch:
 
 jobs:
