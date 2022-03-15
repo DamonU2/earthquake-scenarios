@@ -2,7 +2,7 @@ name: Create release assets
 
 on: 
   release:
-    types: [created]
+    types: [published]
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: upload assets
         uses: AButler/upload-release-assets@v2.0
         with:
-          files: 'FINISHED/geopackages/*;FINISHED/*.csv'
+          files: 'FINISHED/geopackages;FINISHED/*.csv'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           # To add assets to an existing release, use below line with release tag, then run action from actions page
           #release-tag: v1.0
